@@ -1,0 +1,43 @@
+{
+    "name": "luchtech/simple-auth",
+    "description": "A simple approach on adding basic authentication API endpoints to your Laravel application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Carlo Luchavez",
+            "email": "jamescarlo.luchavez@fligno.com",
+            "homepage": "https://www.linkedin.com/in/jsluchavez"
+        }
+    ],
+    "homepage": "https://github.com/luchtech/simple-auth",
+    "keywords": ["Laravel", "SimpleAuth"],
+    "require": {
+        "illuminate/support": "~7|~8",
+        "fligno/starter-kit": "^1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luchtech\\SimpleAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Luchtech\\SimpleAuth\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luchtech\\SimpleAuth\\SimpleAuthServiceProvider"
+            ],
+            "aliases": {
+                "SimpleAuth": "Luchtech\\SimpleAuth\\Facades\\SimpleAuth"
+            }
+        }
+    }
+}
